@@ -1,0 +1,154 @@
+<!--Angelika Kubicka, gr.2, Informatyka Stosowana GGiOŚ-->
+<!DOCTYPE html>
+<html lang="pl-PL">
+	<head>
+	
+		<title>JOŃCZYK-URBANIK – kancelaria notarialna</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Strona internetowa kancelarii notarialnej">
+		<meta name="keywords" content="notariusz, kancelaria notarialna, oświadczenia, testament">
+		<link rel="stylesheet" type="text/css" href="projekt.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> 
+		<script src="jquery-3.4.0.min.js"></script>
+		
+		<script>
+			$(function()
+				{
+				var NavY = $('.nav').offset().top;
+			  	var stickyNav = function()
+					{
+					var ScrollY = $(window).scrollTop();
+						if (ScrollY > NavY) { 
+							$('.nav').addClass('sticky');
+							document.getElementById("stick").style.display="block";
+							}
+						else {
+							$('.nav').removeClass('sticky'); 
+							document.getElementById("stick").style.display="none";
+						}
+					};
+					
+				stickyNav();
+				  
+				$(window).scroll(function() {
+				stickyNav();
+					
+				});
+			});
+			
+			$(function(){
+				$('#slideshow > div:gt(0)').hide();
+			
+			setInterval(function(){ 
+				$('#slideshow > div:first')
+				.fadeOut(2000)
+				.next()
+				.fadeIn(2000)
+				.end()
+				.appendTo('#slideshow');
+				}, 4000);
+			});
+			
+		</script>
+				
+	</head>
+	<body>
+	
+		<div id="slideshow">
+			<div>
+				<img src="photo1.jpg" class="top_pic">
+			</div> 
+			<div>
+				<img src="photo2.jpg" class="top_pic">
+			</div>
+			<div>
+				<img src="photo3.jpg" class="top_pic">
+			</div>
+			<div>
+				<img src="photo4.jpg" class="top_pic">
+			</div>
+		</div>
+			
+		<p id="phone">Tel: 48 111 222 333<br>Fax: 48 111 22 44</p>
+		
+		<div class="content">
+		
+			<div>
+				<h1 id="title">JOŃCZYK-URBANIK - kancelaria notarialna</h1>
+			</div>
+		
+			
+			<div id="stick"></div>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">Strona główna</a></li>
+					<li><a href="cennik.html">Cennik</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a href="zrodla.html">Źródła</a></li>
+				</ul>
+			</div>
+		
+			<div id="text">
+				<h2>O nas</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi.</p>
+				<br>
+				<h2>Założyciele</h2>
+				<br>				
+				<div class="person">
+					<img src="photo5.jpg" class="circle" />
+					<h4>Barbara Jończyk</h4>
+					<p class="descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. 
+					</p>
+				</div>
+				<div class="person">
+					<img src="photo6.jpg" class="circle" />
+					<h4>Krzysztof Urbanik</h4>
+					<p class="descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.
+					</p>
+				</div>	
+				<br>
+				<div style="clear:both;"></div>
+				<h2>Czynności notarialne</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+				<br><br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. </p>
+				</p>
+				<br>
+				<h2>Informacje prawne</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.  Etiam pellentesque aliquet tellus.
+				<br><br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.
+			</div>
+			
+			<div class="side">
+				<h4>Godziny otwarcia: </h4>
+				Poniedziałek: 08:00 - 19:00<br>
+				Wtorek: 08:00 - 19:00<br>
+				Środa: 10:00 - 21:00<br>
+				Czwartek: 08:00 - 19:00<br>
+				Piątek: 08:00 - 17:00<br>
+				Sobota: 09:00 - 17:00<br>
+				Niedziela: nieczynne<br>
+			</div>
+			
+			<div>
+				<img src="building.jpg" class="side">
+			</div>
+					
+			<div class="side">
+			Ul. Notarialna 44/2 22-222 Kraków
+			</div>	
+
+			<div>
+				<img src="paper.jpg" class="side"/>
+			</div>	
+		
+			<footer>
+				&copy JOŃCZYK-URBANIK - kancelaria notarialna. Wszelkie prawa zastrzeżone.
+			</footer>
+		
+	</body>
+</html>

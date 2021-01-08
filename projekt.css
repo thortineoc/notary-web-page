@@ -1,0 +1,353 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 1.2vw;
+}
+
+body{
+	background-color: #616161;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+
+.top_pic{
+	width: 100%;
+	height: 380px;
+	opacity: 0.8;
+}
+
+#slideshow {
+	margin-top: 400px;
+}
+
+#slideshow > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+} 
+
+#phone{
+	font-size: 2.5vw;
+	font-weight: bold;
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+
+.nav{
+	overflow: hidden;
+	background-color: #240029;
+	width: 100%;
+	height: 65px;
+	text-align: center;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#title{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 3.5vw;
+	padding: 1.5%;
+}
+
+#text{
+	float: left;
+	width: 65%;
+	height: 70%;
+	background-color: #aaa;
+	margin: 2%;
+	margin-top: 30px;
+	padding: 10px;
+	
+}
+
+.side{
+	width: 22%;
+	height: 10%;
+	background-color: #aaa;
+	float: right;
+	margin: 30px 60px 0 20px;
+	padding: 10px;
+	line-height: 2;
+}
+
+.circle{
+	width: 40%;
+	height: 40%;
+	border-radius: 50%;
+	margin: 0 25px 25px 25px;
+	float: left;
+}
+
+.person{
+	float: left;
+	width: 45%;
+	margin-left: 30px;
+}
+
+.descr{
+	font-size: 1vw
+}
+
+.sticky{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+ul {
+	margin: 0;
+	padding: 10px;
+	list-style-type: none;
+	display: inline-block;
+	line-height: 250%;
+}
+
+ul a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	
+}
+
+ul > li {
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+	
+ul > li + li{
+	border-left: 2px #777 solid;
+
+}
+
+ul > li:hover{
+	background-color: #0f010d;
+}
+
+ul > li:hover > a{
+	color: #f7b117;
+}
+
+#stick{
+	display: none;
+	background-color: #240029;
+	width: 100%x;
+	height: 65px;
+}
+	
+footer {
+	width: 100%;
+	height: 30px;
+	background-color: #240029;
+	color: #fff;
+	clear: both;
+	text-align: center;
+	padding: 5px 0px 10px 0px;
+	line-height: 200%;
+}
+
+@media(max-width: 1340px){
+	.side{
+		width: 20%;
+	}
+	#text{
+		width: 60%;
+	}
+}
+
+@media(max-width: 1100px){
+
+	.person{
+		float: left;
+		width: 45%;
+		margin-left: 10px;
+	}
+
+	.top_pic{
+		height: 300px;
+	}
+	
+	#slideshow {
+		margin-top: 320px;
+	}
+	
+	.nav{
+		line-height: 110px;
+	}
+	
+	ul > li {
+		width: 100px;
+		height: 35px;
+	}
+	
+	footer{
+		height: 18px;
+	}
+	
+	#text{
+		margin-left: 30px;
+	}
+	
+	.side{
+		margin-right: 30px;
+	}
+}
+
+@media(max-width: 750px){
+	.side{
+		width: 20%;
+		margin: 10px 40px 0 10px;
+	}
+	
+	#text{
+		width: 50%;
+		margin: 10px 10px 0 40px;
+	}
+	
+	.top_pic{
+		height: 200px;
+	}
+	
+	#slideshow {
+		margin-top: 220px;
+	}
+	
+	footer{
+		height: 10px;	
+	}
+}
+
+/*cennik*/
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	height: 100%;
+	text-align: left;
+	margin-bottom: 40px;
+	border-collapse: collapse;
+	background-color: #aaa;
+}
+
+th{
+	border: 3px solid #616161;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+.p_title{
+	margin: 40px 0 30px 50px;
+	font-size: 3vw;
+}
+
+#first{
+	background-color: #333333;
+	color: #e1e1d0;
+	font-size: 1.2vw;
+}
+
+table tr th:nth-child(2){
+	width: 25%;
+}
+
+/*kontakt*/
+
+#data{
+	margin: 0 2.5% 5% 5%;
+	background-color: #aaa;
+	width: 30%;
+	height: 50%;
+	padding: 2.5%;
+	font-size: 1.5vw;
+	text-align: center;
+	float: left;
+}
+
+#data > div{
+	padding: 2px;
+}
+
+form{
+	margin: 0 5% 5% 2.5%;
+	background-color: #aaa;
+	width: 40%;
+	height: 600px;
+	border: 2px solid #333;
+	padding: 2.5%;
+	float: right;
+}
+
+#result{
+	color: red;
+}
+
+label{
+	float: left;
+	width: 10%;
+	margin-top: 5%;
+}
+
+input[type=text]{
+	width: 22%;
+	padding: 1%;
+	margin: 5% 5% 5% 8%;
+	float: left;
+}
+
+input[type=submit]{
+	background-color: black;
+	color: white;
+	display: block;
+	padding: 2%;
+	margin: 5% 5% 5% 8%;
+	width: 30%;
+}
+
+textarea{
+	margin: 5% 5% 5% 8%;
+	width: 72%;
+	min-height: 150px;
+}
+
+#map{
+	margin: 0 0 0 8%;
+	float: left;
+
+}
+
+@media(max-width: 1330px){
+	#map{
+	margin-left: 2%;
+	}
+	
+	form{
+	width: 32%;
+	margin-left: 0;
+	}
+
+}
+
+#box{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #aaa;
+	padding: 10px;
+	width: 60%;
+}
+
+ol li{
+	margin: 0 0 40px 30px;
+}
+
+
+
+
+

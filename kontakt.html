@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kontakt</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="projekt.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> 
+		
+		<script>
+
+			function validateForm() {
+				var result = document.getElementById("result");
+				var imie = document.myform.name.value;
+				var nazwisko = document.myform.surname.value;
+				var email = document.myform.email.value;
+				var phone = document.myform.phone.value;
+				var textarea = document.myform.textarea.value;
+				
+				var patt = /^[a-z0-9]+@{1}[a-z]+\.+[a-z]{2,3}$/i;
+				var patt2 = /\d{9}$/;
+				
+				if (imie.length == 0) {
+					result.innerHTML = "Wprowadź imię.";
+					document.myform.name.focus();
+					return false;
+				}
+				else if (nazwisko.length == 0) {
+					result.innerHTML = "Wprowadź nazwisko.";
+					document.myform.surname.focus();
+					return false;
+				}
+				
+				else if (email.length == 0) {
+					result.innerHTML = "Wprowadź email.";
+					document.myform.email.focus();
+					return false;
+				}
+					
+				else if (!email.match(patt)) {
+					result.innerHTML = "Zły format adresu email.";
+					document.myform.email.focus();
+					return false;
+				}
+				
+				else if (phone.length == 0) {
+					result.innerHTML = "Wprowadź numer telefonu."
+					document.myform.phone.focus();
+					return false;
+				}
+				
+				else if (!phone.match(patt2)) {
+					result.innerHTML = "Zły format numeru telefonu."
+					document.myform.phone.focus();
+					return false;
+				}
+				
+				else if (textarea.length == 0) {
+					result.innerHTML = "Wprowadź tekst."
+					document.myform.textarea.focus();
+					return false;
+				}
+				
+				else {
+					return true;
+				}
+				
+				
+				
+			}
+	
+		</script>
+		
+	</head>
+	<body>
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">Strona główna</a></li>
+					<li><a href="cennik.html">Cennik</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a href="zrodla.html">Źródła</a></li>
+				</ul>
+			</div>
+			
+			<h1 class="p_title">Dane kontaktowe</h2>
+			
+			<div id="data"> 
+				<div>JOŃCZYK-URBANIK – kancelaria notarialna</div>
+				<div>Ul. Notarialna 44/2 22-222 Kraków</div>
+				<div>Tel: 48 111 222 333</div>
+				<div>Fax: 48 111 22 44</div>
+				<div>Email: NotariuszJonUrb@gmail.com</div>
+			</div>
+			
+			
+			<form name="myform" onsubmit="return validateForm()">
+				<h1>Zadaj pytanie</h1><br>
+				<label type="text">Imię</label>
+				<input type="text" name="name"></input>
+				<label type="text">Nazwisko</label>
+				<input type="text" name="surname"></input>
+				<label type="text">Email</label>
+				<input type="text" name="email"></input>
+				<label type="text">Telefon</label>
+				<input type="text" name="phone"></input>
+				<label type="text">Opisz swój problem</label><br>
+				<textarea name="textarea"></textarea> 
+				<input type="submit" value="Wyślij"></input>
+				
+			
+			<p id="result"></p>
+			
+			</form>
+			
+			
+			<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCplnKwjOh_uUUyT9T4t6ubgrvIk56f4bU'></script>
+			
+			<div id="map">
+			
+			<div style='overflow:hidden;height:300px;width:500px;'>
+			<div id='gmap_canvas' style='height:283px;width:453px;'></div>
+			<style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+			<a href='http://maps-generator.com/'>google map on my website</a>
+			
+			</div>
+			
+			<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=b43a79a52f623933f6d8d3570e6916973233e174'></script>
+			<script type='text/javascript'>
+			function init_map(){
+				var myOptions = {
+				zoom:15,center:new google.maps.LatLng(50.0657033,19.91895867),mapTypeId: google.maps.MapTypeId.ROADMAP};
+				map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+				marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.0657033,19.91895867)});
+				infowindow = new google.maps.InfoWindow({content:'<strong>JOŃCZYK-URBANIK – kancelaria notarialna</strong><br>Ul. Notarialna 44/2<br>22-222  Kraków Polska<br>'});
+				google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);
+				});
+				infowindow.open(map,marker);
+				}google.maps.event.addDomListener(window, 'load', init_map);	
+			</script>
+			
+			<footer>
+				<div id="footer">&copy JOŃCZYK-URBANIK - kancelaria notarialna. Wszelkie prawa zastrzeżone.</div>
+			</footer>
+			
+	
+	</body>
+</html>
